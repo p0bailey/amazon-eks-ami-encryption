@@ -1,0 +1,21 @@
+{
+  "builders": [{
+    "type": "amazon-ebs",
+    "encrypt_boot": "true",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "{{user `region`}}",
+    "source_ami_filter": {
+      "filters": {
+        "virtualization-type": "hvm",
+        "name": "{{user `src_ami_name`}}",
+        "root-device-type": "ebs"
+      },
+      "owners": ["{{user `owners`}}"],
+      "most_recent": true
+    },
+    "instance_type": "{{user `instance_type`}}",
+    "ssh_username": "{{user `ssh_username`}}",
+    "ami_name": "{{user `src_ami_name`}}-{{timestamp}}"
+  }]
+}

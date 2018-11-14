@@ -1,0 +1,9 @@
+{
+  "aws_access_key": "",
+  "aws_secret_key": "",
+  "src_ami_name": "amazon-eks-node-v25",
+  "instance_type": "t2.micro",
+  "owners": "602401143452",
+  "region": "eu-west-1",
+  "ssh_username": "ec2-user"
+}
